@@ -1,4 +1,19 @@
 #include <Servo.h>
+
 Servo myServo;
-void setup(){ myServo.attach(9); }
-void loop(){ for(int a=0;a<=180;a++){myServo.write(a);delay(15);} for(int a=180;a>=0;a--){myServo.write(a);delay(15);} }
+
+void setup() {
+  myServo.attach(9);
+}
+
+void loop() {
+  for (int angle = 0; angle <= 180; angle++) {
+    myServo.write(angle);
+    delay(15);
+  }
+
+  for (int angle = 180; angle >= 0; angle--) {
+    myServo.write(angle);
+    delay(15);
+  }
+}
